@@ -4,7 +4,7 @@ import Head from 'next/head'
 export default () => (
   <header>
     <Head>
-      <title>歡迎光臨</title>
+      <title>2017 亞洲智慧型機器人大賽</title>
       <style>{`
 
         html, body{

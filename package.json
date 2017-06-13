@@ -1,16 +1,19 @@
 {
-  "name": "GoodApp",
+  "name": "Robots",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "next -p 8051"
+    "dev": "next -p 8051",
+    "build": "next build",
+    "start": "next start -p 8051"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "micro": "latest",
     "es6-promise": "^4.1.0",
     "isomorphic-fetch": "^2.2.1",
     "next": "^2.4.3",

@@ -55,8 +55,12 @@ export default class Control extends Component {
       })
     )
     .then(
-      setTimeout(function() { window.location = webs[num%11]}.bind(this), 1000)
+      setTimeout(function() { window.location = "http://robot.iecs.fcu.edu.tw/"}.bind(this), 3000)
     )
+    // this.setState({
+    //     appname: num
+    // })
+    // console.log(num);
   }
 
   
@@ -64,9 +68,9 @@ export default class Control extends Component {
   render(){
     return(
       <div style={stylesheets.innertext}>
-        <p style={stylesheets.title}>恭喜抽到</p>
+        {/*<p style={stylesheets.title}>恭喜抽到</p>
         <br></br>
-        <p>{this.state.appname}. {fates[this.state.appname]}</p>
+        <p>{this.state.appname}. {apps[this.state.appname]}</p>*/}
       </div>
     )
   }
