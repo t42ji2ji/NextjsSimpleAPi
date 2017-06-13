@@ -1,0 +1,20 @@
+{
+  "name": "GoodApp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "next -p 8051"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "es6-promise": "^4.1.0",
+    "isomorphic-fetch": "^2.2.1",
+    "next": "^2.4.3",
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4"
+  }
+}
