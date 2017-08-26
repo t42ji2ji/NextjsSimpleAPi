@@ -49,14 +49,25 @@ export default class Control extends Component {
   random(){
     var num = Math.floor(Math.random() * (19 - 0 + 1)) + 0
     var app = apps[num]
+
+    var strUrl = location.search
+    var id = ''
+    if (strUrl.indexOf("?") != -1) {
+      var search = strUrl.split("?");
+      console.log(search[1])
+      id = search[1]
+    }
+
     fetch(`http://140.115.197.16/?school=fcu&app=${app}`).then(
-     this.setState({
-        appname: num
-      })
-    )
-    .then(
-      setTimeout(function() { window.location = "http://robot.iecs.fcu.edu.tw/"}.bind(this), 3000)
-    )
+      this.setState({
+         appname: num
+       })
+     )
+     .then(
+       setTimeout(function() { window.location = `https://www.openedu.tw/course.jsp?id=${id}`}.bind(this), 2000)
+     )
+      
+
     // this.setState({
     //     appname: num
     // })
