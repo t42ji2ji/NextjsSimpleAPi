@@ -56,7 +56,20 @@ export default class Control extends Component {
       var search = strUrl.split("?");
       console.log(search[1])
       id = search[1]
-    }
+      console.log(id)
+      if(id == '1FAIpQLSeuOktWCLfgysm8oH3C7yXjfs5tf6brc2kMUzC1Dv2aIn8cLA' || id == '1FAIpQLScZvP8lg-6_uIasUHevfg-JwKW0LaUbGq1UX4BNeIjUdOcvVg'){
+        var a = 'https://docs.google.com/forms/d/e/1FAIpQLSeuOktWCLfgysm8oH3C7yXjfs5tf6brc2kMUzC1Dv2aIn8cLA/viewform'
+        var b = 'https://docs.google.com/forms/d/e/1FAIpQLScZvP8lg-6_uIasUHevfg-JwKW0LaUbGq1UX4BNeIjUdOcvVg/viewform'
+
+        fetch(`http://140.115.197.16/?school=fcu&app=${app}`).then(
+          this.setState({
+            appname: num
+          })
+        )
+        .then(
+          setTimeout(function() { window.location = `https://docs.google.com/forms/d/e/${id}/viewform`}.bind(this), 2000)
+        )
+      }else{
 
     fetch(`http://140.115.197.16/?school=fcu&app=${app}`).then(
       this.setState({
@@ -67,6 +80,9 @@ export default class Control extends Component {
        setTimeout(function() { window.location = `https://www.openedu.tw/course.jsp?id=${id}`}.bind(this), 2000)
      )
       
+      }
+    }
+
 
     // this.setState({
     //     appname: num
