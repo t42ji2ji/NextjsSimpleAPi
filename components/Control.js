@@ -51,7 +51,7 @@ export default class Control extends Component {
     var app = apps[num]
 
     var strUrl = location.search
-    var id = ''
+    var id = '375'
     if (strUrl.indexOf("?") != -1) {
       var search = strUrl.split("?");
       console.log(search[1])
