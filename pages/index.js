@@ -14,7 +14,8 @@ const stylesheets = {
   container: {
     display: 'flex',
     justifyContent: 'center',
-    marginTop:340
+    marginTop:30,
+    height: '100vh'
   }
 }
 

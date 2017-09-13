@@ -4,7 +4,7 @@ import Head from 'next/head'
 export default () => (
   <header>
     <Head>
-      <title>2017 亞洲智慧型機器人大賽</title>
+      <title>問卷</title>
       <style>{`
 
         html, body{
@@ -28,6 +28,7 @@ export default () => (
 
 
       `}</style>
+      
       <meta name='viewport' content='initial-scale=1.0, width=device-width' />
       <link rel='stylesheet' href='//cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.2/semantic.min.css' />
     </Head>
