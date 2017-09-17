@@ -114,7 +114,9 @@ export default class Control extends Component {
     fetch(`http://140.115.197.16/?school=fcu&app=${app}`).then(
       this.setState({
          appname: youtubename[id]
-    }))
+    })).then(
+      setTimeout(function() { window.location = `https://docs.google.com/forms/d/e/1FAIpQLSeBjOWXTnlyPkDIdHaR444X2NU6FyfECkaCYVxI-XTrNFXHDQ/viewform`}.bind(this), 2000)
+    )
 
 
 
@@ -129,9 +131,6 @@ export default class Control extends Component {
   render(){
     return(
       <div style={stylesheets.innertext}>
-        <h1>{this.state.appname}</h1>
-        <div style={stylesheets.button} onClick={this.handleVideo}>觀看影片</div>
-        <div style={stylesheets.button} onClick={this.handleQuestionnaire}>填寫問卷</div>
       </div>
     )
 
