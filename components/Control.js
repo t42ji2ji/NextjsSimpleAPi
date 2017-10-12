@@ -56,14 +56,17 @@ export default class Control extends Component {
 
     var strUrl = location.search
     var id = ''
+    var poss = ''
     if (strUrl.indexOf("?") != -1) {
       var search = strUrl.split("?");
       console.log(search[1])
+      poss = apps[search[1]]
       id = pos[search[1]]
       
       console.log(id)
+      console.log(poss)
 
-      fetch(`http://140.115.197.16/?school=fcu&app=${app}`)
+      fetch(`http://140.115.197.16/?school=fcu&app=${poss}`)
         .then(
           this.setState({
             appname: num
