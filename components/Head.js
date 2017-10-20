@@ -4,7 +4,7 @@ import Head from 'next/head'
 export default () => (
   <header>
     <Head>
-      <title>2017 亞洲智慧型機器人大賽</title>
+      <title>逢甲打卡</title>
       <style>{`
 
         html, body{
@@ -24,6 +24,11 @@ export default () => (
 
          #__next{
           height:100%;
+        }
+
+        .button{
+          background-color: orange;
+          color:white;
         }
 
 

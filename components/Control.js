@@ -20,11 +20,12 @@ const webs = [
 const stylesheets = {
   innertext: {
     alignitem:'center',
-    fontSize: 50,
-    textAlign: 'center'
+    fontSize: 20,
+    textAlign: 'center',
+    width: 190
   },
   title: {
-    fontSize: 30,
+    fontSize: 20,
   }
 }
 
@@ -35,16 +36,36 @@ export default class Control extends Component {
     super(props)
 
     this.state = {
-      appname: "none"
+      appname: "none",
+      value: "_"
     }
 
     this.random = this.random.bind(this)
+    this.okfunc = this.okfunc.bind(this)
+    this.handleChange = this.handleChange.bind(this)
   }
 
   componentDidMount(){
     this.random()
   }
 
+  handleChange(event) {
+    console.log(event.target.value)
+    this.setState({value: event.target.value});
+  }
+
+  okfunc(){
+    var num = Math.floor(Math.random() * (19 - 0 + 1)) + 0
+    var app = apps[num]
+
+    fetch(`http://140.115.197.16/?school=fcu&app=${app}`).then(
+      this.setState({
+        appname: num
+      })
+    )
+
+    alert( this.state.value + "打卡成功")
+  }
 
   random(){
     var num = Math.floor(Math.random() * (19 - 0 + 1)) + 0
@@ -76,9 +97,6 @@ export default class Control extends Component {
          appname: num
        })
      )
-     .then(
-       setTimeout(function() { window.location = `https://www.openedu.tw/course.jsp?id=${id}`}.bind(this), 2000)
-     )
       
       }
     }
@@ -95,9 +113,9 @@ export default class Control extends Component {
   render(){
     return(
       <div style={stylesheets.innertext}>
-        {/*<p style={stylesheets.title}>恭喜抽到</p>
-        <br></br>
-        <p>{this.state.appname}. {apps[this.state.appname]}</p>*/}
+       
+          學號: <input type="text" name="fname" onChange={this.handleChange} />
+          <input type="submit" className="button" onClick={this.okfunc} />
       </div>
     )
   }
